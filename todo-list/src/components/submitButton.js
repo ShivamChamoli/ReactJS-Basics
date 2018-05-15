@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/lib/Button';
+import ReactDOM from 'react-dom';
 
 export default class SubmitButton extends React.Component {
     constructor(props) {
@@ -8,10 +9,9 @@ export default class SubmitButton extends React.Component {
         this.handleClick.bind(this);
     }
     handleClick(obj) {
-        /*this.setState(prevState => ({
-            random: !prevState.random
-        }));*/ 
-        console.log(this.state.random);
+        var textVal = document.getElementById("Add Task").value;
+        this.props.list.push(textVal);
+        //ReactDOM.render(document.getElementsByClassName('listGrid'), document.getElementById('root'));
     }
     render() {
         return (

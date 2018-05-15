@@ -7,7 +7,8 @@ import { Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import ListTasks from './components/listTasks'
 
 class App extends Component {
-  render() {
+    render() {
+    var tasks = ["study", "wash laundry", "cook food"];
     return (
       <div className="App">
         <header className="App-header">
@@ -18,11 +19,11 @@ class App extends Component {
             <Grid bsClass="container">
                     <Row className="show-grid">
                         <Col xs={12} md={2}><code><Textbox label="Add Task" placeholder="Enter task" /></code></Col>
-                        <Col xs={12} md={2}><code><SubmitButton name="Add tasks" /></code></Col>
+                        <Col xs={12} md={2}><code><SubmitButton name="Add tasks" list={tasks}/></code></Col>
                     </Row>
-                    {/*<Row className="show-grid">
-                        <ListTasks />
-                    </Row>*/}
+                    <Row className="show-grid" id="listGrid">
+                        <Col xs={12} md={2}><ListTasks list={tasks} /></Col>
+                    </Row>
             </Grid>
         </Jumbotron>
         </div>
