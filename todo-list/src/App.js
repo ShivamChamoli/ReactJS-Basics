@@ -4,6 +4,7 @@ import './App.css';
 import Textbox from './components/textbox'
 import SubmitButton from './components/submitButton'
 import { Grid, Row, Col, Jumbotron } from 'react-bootstrap';
+import ListTasks from './components/listTasks'
 
 class App extends Component {
   render() {
@@ -16,15 +17,12 @@ class App extends Component {
         <Jumbotron>
             <Grid bsClass="container">
                     <Row className="show-grid">
-                        {/*<Col xs={12} md={8}>
-                            <Textbox label="Add Task" placeholder="Enter task" /> 
-                        </Col>
-                        <Col xs={6} md={4}>
-                            <SubmitButton name="Submit tasks" />
-                        </Col>*/}
                         <Col xs={12} md={2}><code><Textbox label="Add Task" placeholder="Enter task" /></code></Col>
-                        <Col xs={12} md={2}><code><SubmitButton name="Submit tasks" /></code></Col>
+                        <Col xs={12} md={2}><code><SubmitButton name="Add tasks" /></code></Col>
                     </Row>
+                    {/*<Row className="show-grid">
+                        <ListTasks />
+                    </Row>*/}
             </Grid>
         </Jumbotron>
         </div>
