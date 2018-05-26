@@ -17,10 +17,10 @@ class App extends Component {
         </header>
         <Jumbotron>
             <Grid bsClass="container">
-                    <Row className="show-grid">
+                    {/*<Row className="show-grid">
                         <Col xs={12} md={2}><code><Textbox label="Add Task" placeholder="Enter task" /></code></Col>
                         <Col xs={12} md={2}><code><SubmitButton name="Add tasks" list={tasks}/></code></Col>
-                    </Row>
+                    </Row>*/}
                     <Row className="show-grid" id="listGrid">
                         <Col xs={12} md={2}><ListTasks list={tasks} /></Col>
                     </Row>

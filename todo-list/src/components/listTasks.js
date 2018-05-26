@@ -7,7 +7,7 @@ export default class ListTasks extends React.Component {
     }
     render() {
         return (
-            <RenderList tasks={this.props.list} />
+            <RenderList tasks={this.props.list} button="Submit Button" label="Add Task" placeholder = "Enter Task"/>
         );
     }
 }

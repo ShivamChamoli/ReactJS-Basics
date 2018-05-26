@@ -5,12 +5,14 @@ import ReactDOM from 'react-dom';
 export default class SubmitButton extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { random: true };
+        this.state = { tasks: this.props.list };
         this.handleClick.bind(this);
     }
     handleClick(obj) {
         var textVal = document.getElementById("Add Task").value;
         this.props.list.push(textVal);
+        if (textVal!=="")
+            this.setState({ tasks: this.props.list });
         //ReactDOM.render(document.getElementsByClassName('listGrid'), document.getElementById('root'));
     }
     render() {
