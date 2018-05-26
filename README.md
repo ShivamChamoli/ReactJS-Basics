@@ -1,2 +1,2 @@
-Go to the folder todo-list from the terminal
-type npm start and enter
+Go to the folder todo-list from the terminal.
+Type npm start and enter
