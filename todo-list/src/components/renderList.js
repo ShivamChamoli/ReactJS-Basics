@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/lib/Button';
+import { Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 
 export default class RenderList extends React.Component {
     constructor(props) {
@@ -23,14 +24,20 @@ export default class RenderList extends React.Component {
     }
     render() {
         return (
-            <div>
-            <input type="text" id={this.props.label} placeholder={this.props.placeholder} />       
-            <Button id={this.props.button} bsStyle="primary" onClick={this.handleClick.bind(this, { '1': 1, '2': 2 })}>{this.props.button}</Button>
-            <ul>
-                {this.props.tasks.map(item => (
-                <li key={item.id}>{item}</li>
-                ))}
-            </ul>
+            <div className="add-task-functionality">
+                <Grid bsClass="container">
+                    <Row className="show-grid">
+                        <Col xs={12} md={8}><input type="text" id={this.props.label} placeholder={this.props.placeholder} /></Col>       
+                        <Col xs={12} md={4}><Button id={this.props.button} bsStyle="primary" onClick={this.handleClick.bind(this, { '1': 1, '2': 2 })}>{this.props.button}</Button></Col>
+                    </Row>
+                    <Row className="show-grid">
+                        <ul>
+                        {this.props.tasks.map(item => (
+                        <li key={item.id}>{item}</li>
+                        ))}
+                        </ul>
+                    </Row>
+                </Grid>
             </div>
         );
     }
